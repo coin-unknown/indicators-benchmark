@@ -1,0 +1,31 @@
+{
+  "name": "indicators-benchmark",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/follow-traders/indicators-benchmark.git"
+  },
+  "author": "Dmitriy Yurov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/follow-traders/indicators-benchmark/issues"
+  },
+  "homepage": "https://github.com/follow-traders/indicators-benchmark#readme",
+  "dependencies": {
+    "@follow-traders/indicators": "^0.3.22",
+    "benchmark": "^2.1.4",
+    "technicalindicators": "^3.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1"
+  }
+}
