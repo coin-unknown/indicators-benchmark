@@ -1,6 +1,6 @@
 import Benchmark from 'benchmark';
 import { SMA as SMA1 } from 'technicalindicators';
-import { SMA as SMA2 } from '@follow-traders/indicators';
+import { SMA as SMA2 } from '@debut/indicators';
 
 const DATA_LENGTH = 1000;
 const PERIOD = 12;
@@ -11,7 +11,7 @@ const sma1 = new SMA1({ period: PERIOD, values: [] });
 const sma2 = new SMA2(PERIOD);
 
 // technicalindicators SMA x 4,721 ops/sec
-// @follow-traders/indicators SMA x 62,511 ops/sec
+// @debut/indicators SMA x 62,511 ops/sec
 
 suite
     .add('technicalindicators SMA', function () {
@@ -19,7 +19,7 @@ suite
             sma1.nextValue(dataset[i]);
         }
     })
-    .add('@follow-traders/indicators SMA', function () {
+    .add('@debut/indicators SMA', function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             sma2.nextValue(dataset[i]);
         }
