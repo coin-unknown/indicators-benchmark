@@ -21,11 +21,11 @@ suite
             ema1.nextValue(dataset[i]);
         }
     })
-    .add('trading-signals EMA', function () {
-        for (let i = 0; i < DATA_LENGTH; i++) {
-            ema3.update(dataset[i]);
-        }
-    })
+    // .add('trading-signals EMA', function () {
+    //     for (let i = 0; i < DATA_LENGTH; i++) {
+    //         ema3.update(dataset[i]);
+    //     }
+    // })
     .add('ta.js EMA', function () {
         ta.ema(dataset, PERIOD);
     })
