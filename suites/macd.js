@@ -1,33 +1,29 @@
-import { MACD } from '@debut/indicators';
 import Benchmark from 'benchmark';
-import { MACD as MACD2 } from 'technicalindicators';
+import { MACD as MACD1 } from 'technicalindicators';
+import { MACD as MACD2 } from '@debut/indicators';
 
 const DATA_LENGTH = 100;
-const PERIOD1 = 12;
-const PERIOD2 = 26;
-const PERIOD3 = 9;
+const PERIOD = 20;
+const FAST_PERIOD = 16;
+const SIGNAL_PERIOD = 8;
 
 const suite = new Benchmark.Suite();
 const dataset = Array.from({ length: DATA_LENGTH }, () => Math.random() * 40);
-const macd = new MACD(PERIOD1, PERIOD2, PERIOD3);
-const macd2 = new MACD2({
-    values: [],
-    SimpleMAOscillator: false,
-    SimpleMASignal: false,
-    fastPeriod: PERIOD1,
-    slowPeriod: PERIOD2,
-    signalPeriod: PERIOD3,
-});
+const macd1 = new MACD1({  values: [], SimpleMAOscillator: false, SimpleMASignal: false, fastPeriod: FAST_PERIOD, slowPeriod: PERIOD, signalPeriod: SIGNAL_PERIOD });
+const macd2 = new MACD2(FAST_PERIOD, PERIOD, SIGNAL_PERIOD);
+
+// technicalindicators SMA x 4,721 ops/sec
+// @debut/indicators SMA x 62,511 ops/sec
 
 suite
     .add('technicalindicators MACD', function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
-            macd2.nextValue(dataset[i]);
+            macd1.nextValue(dataset[i]);
         }
     })
     .add('@debut/indicators MACD', function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
-            macd.nextValue(dataset[i]);
+            macd2.nextValue(dataset[i]);
         }
     })
     .on('cycle', function (event) {
