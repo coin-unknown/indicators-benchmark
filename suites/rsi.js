@@ -25,7 +25,7 @@ suite
     })
     .add('trading-signals RSI', function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
-            rsi3.nextValue(dataset[i]);
+            rsi3.update(dataset[i]);
         }
     })
     .on('cycle', function (event) {
