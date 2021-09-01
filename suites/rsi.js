@@ -3,7 +3,7 @@ import { RSI } from 'technicalindicators';
 import { RSI as RSI2 } from '@debut/indicators';
 import { RSI as RSI3 } from 'trading-signals';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 14;
 
 const suite = new Benchmark.Suite();

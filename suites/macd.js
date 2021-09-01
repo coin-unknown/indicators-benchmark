@@ -2,7 +2,7 @@ import { MACD } from '@debut/indicators';
 import Benchmark from 'benchmark';
 import { MACD as MACD2 } from 'technicalindicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD1 = 12;
 const PERIOD2 = 26;
 const PERIOD3 = 9;

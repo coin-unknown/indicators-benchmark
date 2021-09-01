@@ -2,7 +2,7 @@ import Benchmark from 'benchmark';
 import { Stochastic } from 'technicalindicators';
 import { Stochastic as Stochastic2 } from '@debut/indicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 14;
 
 const suite = new Benchmark.Suite();

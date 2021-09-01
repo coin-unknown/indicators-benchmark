@@ -2,7 +2,7 @@ import { BollingerBands } from '@debut/indicators';
 import Benchmark from 'benchmark';
 import { BollingerBands as BollingerBands2 } from 'technicalindicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 14;
 const ST_DEV = 2;
 

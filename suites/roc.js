@@ -2,7 +2,7 @@ import Benchmark from 'benchmark';
 import { ROC } from '@debut/indicators';
 import { ROC as ROC2 } from 'technicalindicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 5;
 
 const suite = new Benchmark.Suite();

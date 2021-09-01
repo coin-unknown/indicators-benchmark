@@ -2,7 +2,7 @@ import Benchmark from 'benchmark';
 import { SMA as SMA1 } from 'technicalindicators';
 import { SMA as SMA2 } from '@debut/indicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 12;
 
 const suite = new Benchmark.Suite();

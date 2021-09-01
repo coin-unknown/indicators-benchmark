@@ -2,7 +2,7 @@ import Benchmark from 'benchmark';
 import { ATR as ATR1 } from 'technicalindicators';
 import { ATR as ATR2 } from '@debut/indicators';
 
-const DATA_LENGTH = 1000;
+const DATA_LENGTH = 100;
 const PERIOD = 12;
 
 const suite = new Benchmark.Suite();
