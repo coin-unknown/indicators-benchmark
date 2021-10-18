@@ -5,8 +5,18 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "start:ao": "node ./suites/ao.js",
+    "start:atr": "node ./suites/atr.js",
+    "start:bbands": "node ./suites/bbands.js",
+    "start:cci": "node ./suites/cci.js",
+    "start:ema": "node ./suites/ema.js",
+    "start:macd": "node ./suites/macd.js",
+    "start:roc": "node ./suites/roc.js",
+    "start:rsi": "node ./suites/rsi.js",
+    "start:sma": "node ./suites/sma.js",
+    "start:stochastic": "node ./suites/stochastic.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --config './.prettierrc.json' --write 'suites/**/*.js'"
+    "prettier": "prettier suites/**/*.js --write"
   },
   "repository": {
     "type": "git",
@@ -23,7 +33,7 @@
     "benchmark": "^2.1.4",
     "ta.js": "^1.4.5",
     "technicalindicators": "^3.1.0",
-    "trading-signals": "^2.2.0"
+    "trading-signals": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

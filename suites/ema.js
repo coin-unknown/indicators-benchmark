@@ -19,17 +19,17 @@ suite
             ema1.nextValue(dataset[i]);
         }
     })
-    .add('trading-signals EMA', function () {
-        for (let i = 0; i < DATA_LENGTH; i++) {
-            ema3.update(dataset[i]);
-        }
-    })
     .add('ta.js EMA', function () {
         ta.ema(dataset, PERIOD);
     })
     .add('@debut/indicators EMA', function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             ema2.nextValue(dataset[i]);
+        }
+    })
+    .add('trading-signals EMA', function () {
+        for (let i = 0; i < DATA_LENGTH; i++) {
+            ema3.update(dataset[i]);
         }
     })
     .on('cycle', function (event) {
