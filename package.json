@@ -14,6 +14,7 @@
     "start:roc": "node ./suites/roc.js",
     "start:rsi": "node ./suites/rsi.js",
     "start:sma": "node ./suites/sma.js",
+    "start:wema": "node ./suites/wema.js",
     "start:stochastic": "node ./suites/stochastic.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier suites/**/*.js --write"
@@ -29,16 +30,16 @@
   },
   "homepage": "https://github.com/debut/indicators-benchmark#readme",
   "dependencies": {
-    "@debut/indicators": "^1.0.6",
+    "@debut/indicators": "^1.1.0",
     "benchmark": "^2.1.4",
-    "ta.js": "^1.4.5",
+    "ta.js": "^1.5.1",
     "technicalindicators": "^3.1.0",
-    "trading-signals": "^2.3.0"
+    "trading-signals": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.1"
   }
 }
