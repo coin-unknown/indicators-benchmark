@@ -9,6 +9,7 @@
     "start:atr": "node ./suites/atr.js",
     "start:bbands": "node ./suites/bbands.js",
     "start:cci": "node ./suites/cci.js",
+    "start:psar": "node ./suites/psar.js",
     "start:ema": "node ./suites/ema.js",
     "start:macd": "node ./suites/macd.js",
     "start:roc": "node ./suites/roc.js",
@@ -30,16 +31,16 @@
   },
   "homepage": "https://github.com/debut/indicators-benchmark#readme",
   "dependencies": {
-    "@debut/indicators": "^1.1.0",
+    "@debut/indicators": "^1.2.1",
     "benchmark": "^2.1.4",
     "ta.js": "^1.5.1",
     "technicalindicators": "^3.1.0",
-    "trading-signals": "^2.4.0"
+    "trading-signals": "^3.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.1.0",
+    "eslint": "^8.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.0"
   }
 }

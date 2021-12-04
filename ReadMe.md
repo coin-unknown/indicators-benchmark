@@ -3,7 +3,7 @@
 
 |    Indicator    	|  @debut/indicators (ops/sec)  	| technicalindicators (ops/sec) 	| trading-signals (ops/sec) 	|  ta.js (ops/sec)  	|
 |:---------------:	|:---------------------------------:|:---------------------------------:|:-----------------------------:|:-----------------:	|
-| AwesomeOscillator |            458,936            	|             13,517             	|             732             	|         x         	|
+| AwesomeOscillator |            459,244            	|             17,263             	|             732             	|         x         	|
 |       ATR       	|            720,049            	|             85,709             	|            1,400             	|         x         	|
 | Bollinger Bands 	|             273,562            	|              6,588             	|             62.93            	|         x         	|
 |       CCI       	|             235,552            	|              9,268              	|             x             	|         x         	|
