@@ -15,7 +15,9 @@
     "start:roc": "node ./suites/roc.js",
     "start:rsi": "node ./suites/rsi.js",
     "start:sma": "node ./suites/sma.js",
+    "start:adx": "node ./suites/adx.js",
     "start:wema": "node ./suites/wema.js",
+    "start:wma": "node ./suites/wma.js",
     "start:stochastic": "node ./suites/stochastic.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier suites/**/*.js --write"
@@ -31,7 +33,7 @@
   },
   "homepage": "https://github.com/debut/indicators-benchmark#readme",
   "dependencies": {
-    "@debut/indicators": "^1.2.1",
+    "@debut/indicators": "^1.2.5",
     "benchmark": "^2.1.4",
     "ta.js": "^1.5.1",
     "technicalindicators": "^3.1.0",
