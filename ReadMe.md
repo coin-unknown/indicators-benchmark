@@ -17,3 +17,16 @@
 |       WMA     	|             97,807            	|            22,617             	|             x             	|         x    	        |
 |      PSAR     	|             1,084,123            	|            166,158             	|             x             	|         x    	        |
 |       ADX      	|              356,637             	|              26,581           	|             x             	|         x
+
+
+## Contribute guide
+
+### Step 1: Add you library to `suter.js` sources object
+### Step 2: Add you library to `suret.js` columns list
+### Step 3: Implement benchmark sutes for library indicator
+
+## Report generation
+
+Run command `npm run bench` to generate new report.
+
+Then copy report to main file `ReadMe.md`
