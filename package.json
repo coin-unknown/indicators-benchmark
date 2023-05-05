@@ -2,26 +2,25 @@
   "name": "indicators-benchmark",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "bench": "npm-run-all prepare start:*",
-    "prepare": "node ./tools/prepare.js",
-    "start:ao": "node ./suites/ao.js",
-    "start:atr": "node ./suites/atr.js",
-    "start:bbands": "node ./suites/bbands.js",
-    "start:cci": "node ./suites/cci.js",
-    "start:dc": "node ./suites/dc.js",
-    "start:psar": "node ./suites/psar.js",
-    "start:ema": "node ./suites/ema.js",
-    "start:macd": "node ./suites/macd.js",
-    "start:roc": "node ./suites/roc.js",
-    "start:rsi": "node ./suites/rsi.js",
-    "start:sma": "node ./suites/sma.js",
-    "start:adx": "node ./suites/adx.js",
-    "start:wema": "node ./suites/wema.js",
-    "start:wma": "node ./suites/wma.js",
-    "start:stochastic": "node ./suites/stochastic.js",
+    "prepare": "ts-node ./tools/prepare",
+    "start:ao": "ts-node ./suites/ao",
+    "start:adx": "ts-node ./suites/adx",
+    "start:atr": "ts-node ./suites/atr",
+    "start:bbands": "ts-node ./suites/bbands",
+    "start:cci": "ts-node ./suites/cci",
+    "start:dc": "ts-node ./suites/dc",
+    "start:psar": "ts-node ./suites/psar",
+    "start:ema": "ts-node ./suites/ema",
+    "start:macd": "ts-node ./suites/macd",
+    "start:roc": "ts-node ./suites/roc",
+    "start:rsi": "ts-node ./suites/rsi",
+    "start:sma": "ts-node ./suites/sma",
+    "start:wema": "ts-node ./suites/wema",
+    "start:wma": "ts-node ./suites/wma",
+    "start:stochastic": "ts-node ./suites/stochastic.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier suites/**/*.js --write"
   },
@@ -38,15 +37,16 @@
   "dependencies": {
     "@debut/indicators": "^1.3.18",
     "benchmark": "^2.1.4",
-    "ta.js": "^1.16.3",
-    "technicalindicators": "^3.1.0",
-    "trading-signals": "^3.7.0"
+    "indicatorts": "^1.0.14",
+    "technicalindicators": "^3.1.0"
   },
   "devDependencies": {
+    "@types/benchmark": "^2.1.2",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1"
   }
 }

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { tableColums } from "./suter.js";
+import { tableColums } from "./suter";
 
 
 const columnSize = `:---------------:`;

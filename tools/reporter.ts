@@ -1,10 +1,6 @@
 import fs from 'fs';
-import { sources } from "./suter.js";
+import { tableColums } from "./suter";
 
-const columnSize = `:---------------:`;
-const tableColums = [sources.debut, sources.ti, sources.trading_signals, sources.tajs];
-const tableHeader = `| Indicator name | ${tableColums.map(item => `${item} (ops/sec)`).join('|')}|\n`;
-const tableHeaderSeparator = `|${columnSize}|${tableColums.map(() => columnSize).join('|')}|\n`;
 let tableBody = '';
 
 export function reporter() {
@@ -38,9 +34,9 @@ export function reporter() {
     fs.appendFileSync('./report.md', `${tableBody}`, 'utf8');
 }
 
-function formatNumber(num) {
+function formatNumber(num: number) {
     var p = num.toFixed(2).split(".");
-    return p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+    return p[0].split("").reverse().reduce(function(acc: string, num: string, i: number, ) {
         return num + (num != "-" && i && !(i % 3) ? "," : "") + acc;
     }, "");
 }
