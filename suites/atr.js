@@ -2,11 +2,13 @@ import Benchmark from 'benchmark';
 import { ATR as ATR1 } from 'technicalindicators';
 import { ATR as ATR2 } from '@debut/indicators';
 import { ATR as ATR3 } from 'trading-signals';
+import { sources } from '../tools/suter.js';
+import { reporter } from '../tools/reporter.js';
 
 const DATA_LENGTH = 100;
 const PERIOD = 12;
 
-const suite = new Benchmark.Suite();
+const suite = new Benchmark.Suite('ATR');
 const dataset = Array.from({ length: DATA_LENGTH }, () => ({
     high: Math.random() * 40,
     low: Math.random() * 40,
@@ -17,18 +19,18 @@ const atr2 = new ATR2(PERIOD);
 const atr3 = new ATR3(PERIOD);
 
 suite
-    .add('technicalindicators ATR', function () {
+    .add(`${sources.ti}`, function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             atr1.nextValue(dataset[i]);
         }
     })
-    .add('@debut/indicators ATR', function () {
+    .add(`${sources.debut}`, function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             const { high, low, close } = dataset[i];
             atr2.nextValue(high, low, close);
         }
     })
-    .add('trading-signals ATR', function () {
+    .add(`${sources.trading_signals}`, function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             atr3.update(dataset[i]);
         }
@@ -36,4 +38,5 @@ suite
     .on('cycle', function (event) {
         console.log(String(event.target));
     })
+    .on('complete', reporter)
     .run({ async: true });

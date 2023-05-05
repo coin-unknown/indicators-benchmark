@@ -3,9 +3,9 @@
 
 |    Indicator    	|  @debut/indicators (ops/sec)  	| technicalindicators (ops/sec) 	| trading-signals (ops/sec) 	|  ta.js (ops/sec)  	|
 |:---------------:	|:---------------------------------:|:---------------------------------:|:-----------------------------:|:-----------------:	|
-| AwesomeOscillator |            459,244            	|             17,263             	|             732             	|         x         	|
-|       ATR       	|            720,049            	|             85,709             	|            1,400             	|         x         	|
-| Bollinger Bands 	|             273,562            	|              6,588             	|             62.93            	|         x         	|
+| AwesomeOscillator |            335,315            	|             24,547             	|             732             	|         x         	|
+|       ATR       	|            954,257            	|             141,003             	|            2.56             	|         x         	|
+| Bollinger Bands 	|             392,649            	|              10,813            	|             62.93            	|         x         	|
 |       CCI       	|             235,552            	|              9,268              	|             x             	|         x         	|
 |       EMA       	|            2,451,966            	|             322,287            	|            4.90           	|      740,489      	|
 |       MACD      	|            1,146,681            	|             48,323             	|             2.10             	|         x         	|
