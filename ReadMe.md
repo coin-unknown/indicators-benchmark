@@ -1,4 +1,9 @@
 # JavaScript trading indicators benchmark
+
+A universal set for testing the performance of libraries of technical indicators in JavaScript or TypeScript.
+
+This tool measures the performance of indicators under equal conditions. The result of the execution is a performance table. Used to monitor the performance of debut indicators, identifying opportunities to improve performance.
+
 ## Latest Report
 
 | Indicator name | @debut/indicators (ops/sec)|technicalindicators (ops/sec)|trading-signals (ops/sec)|ta.js (ops/sec)|
@@ -22,7 +27,9 @@
 ## Contribute guide
 
 **Step 1:** Add you library to `suter.ts` sources object
+
 **Step 2:** Add you library to `suret.ts` columns list
+
 **Step 3:** Implement benchmark sutes for library indicator
 
 ## Report generation
