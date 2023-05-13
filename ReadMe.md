@@ -6,23 +6,24 @@ This tool measures the performance of indicators under equal conditions. The res
 
 ## Latest Report
 
-| Indicator name | @debut/indicators (ops/sec)|technicalindicators (ops/sec)|trading-signals (ops/sec)|ta.js (ops/sec)|
-|:---------------:|:---------------:|:---------------:|:---------------:|:---------------:|
-|AwesomeOscillator|334,729|22,280|x|x|
-|ATR|959,853|138,269|2|x|
-|Bollinger Bands|416,239|10,864|71|x|
-|CCI|408,103|15,101|x|x|
-|DC|579,186|x|x|x|
-|PSAR|1,448,398|274,614|x|x|
-|EMA|1,688,207|437,915|5|1,009,262|
-|MACD|1,471,612|89,241|2|x|
-|ROC|3,586,280|56,036|550|x|
-|RSI|1,238,360|38,179|0|x|
-|SMA|1,040,127|70,585|280|x|
-|ADX|588,816|42,038|x|x|
-|WEMA|1,511,194|435,418|x|x|
-|WMA|139,300|40,719|x|x|
-|Stochastic|393,242|28,681|313|x|
+| Indicator name | @debut/indicators (ops/sec)|technicalindicators (ops/sec)|indicatorts (ops/sec)|
+|:---------------:|:---------------:|:---------------:|:---------------:|
+|AwesomeOscillator|318|23|158|
+|ADX|358|42|x|
+|ATR|613|136|95|
+|Bollinger Bands|347|9|219|
+|CCI|151|12|158|
+|DC|474|x|74|
+|PSAR|1,453|278|666|
+|EMA|1,720|452|1,537|
+|MACD|1,417|90|467|
+|ROC|3,625|64|x|
+|RSI|1,239|38|315|
+|SMA|678|65|645|
+|WEMA|1,462|455|x|
+|WMA|287|41|x|
+|Stochastic|340|25|67|
+
 
 ## Contribute guide
 
