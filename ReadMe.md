@@ -21,9 +21,9 @@
 
 ## Contribute guide
 
-### Step 1: Add you library to `suter.js` sources object
-### Step 2: Add you library to `suret.js` columns list
-### Step 3: Implement benchmark sutes for library indicator
+**Step 1:** Add you library to `suter.ts` sources object
+**Step 2:** Add you library to `suret.ts` columns list
+**Step 3:** Implement benchmark sutes for library indicator
 
 ## Report generation
 
