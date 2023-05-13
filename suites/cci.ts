@@ -2,11 +2,10 @@ import Benchmark from 'benchmark';
 import { CCI as CCI1 } from 'technicalindicators';
 import { CCI as CCI2 } from '@debut/indicators';
 import { communityChannelIndex as cci3 } from 'indicatorts';
-import { sources } from '../tools/suter.js';
+import { DATA_LENGTH, sources } from '../tools/suter.js';
 import { reporter } from '../tools/reporter.js';
 import { open, high, low, close } from '../tools/data.js';
 
-const DATA_LENGTH = 100;
 const PERIOD = 12;
 
 const suite = new Benchmark.Suite('CCI');

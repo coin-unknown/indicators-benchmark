@@ -16,12 +16,12 @@ const bb1 = new BollingerBands(PERIOD, ST_DEV);
 const bb2 = new BollingerBands2({ period: PERIOD, stdDev: ST_DEV, values: [] });
 
 suite
-    .add(sources.ti, function () {
+    .add(sources.debut, function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             bb1.nextValue(close[i]);
         }
     })
-    .add(sources.debut, function () {
+    .add(sources.ti, function () {
         for (let i = 0; i < DATA_LENGTH; i++) {
             bb2.nextValue(close[i]);
         }

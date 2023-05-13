@@ -1,16 +1,18 @@
 import Benchmark from 'benchmark';
-import { WMA as WMA1 } from 'technicalindicators';
-import { WMA as WMA2 } from '@debut/indicators';
-import { sources } from '../tools/suter.js';
-import { reporter } from '../tools/reporter.js';
+import { WEMA as WEMA1 } from 'technicalindicators';
+import { WEMA as WEMA2 } from '@debut/indicators';
+import { DATA_LENGTH, sources } from '../tools/suter';
+import { reporter } from '../tools/reporter';
 
-const DATA_LENGTH = 100;
 const PERIOD = 12;
 
-const suite = new Benchmark.Suite('WMA');
+const suite = new Benchmark.Suite('WEMA');
 const dataset = Array.from({ length: DATA_LENGTH }, () => Math.random() * 40);
-const wema1 = new WMA1({ period: PERIOD, values: [] });
-const wema2 = new WMA2(PERIOD);
+const wema1 = new WEMA1({ period: PERIOD, values: [] });
+const wema2 = new WEMA2(PERIOD);
+
+// technicalindicators SMA x 4,721 ops/sec
+// @debut/indicators SMA x 62,511 ops/sec
 
 suite
     .add(`${sources.ti}`, function () {

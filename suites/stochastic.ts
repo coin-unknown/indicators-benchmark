@@ -1,11 +1,10 @@
 import Benchmark from 'benchmark';
 import { Stochastic } from 'technicalindicators';
 import { Stochastic as Stochastic2 } from '@debut/indicators';
-import { StochasticOscillator as Stochastic3 } from 'trading-signals';
-import { sources } from '../tools/suter.js';
-import { reporter } from '../tools/reporter.js';
+import { stochasticOscillator as stoch3 } from 'indicatorts';
+import { DATA_LENGTH, sources } from '../tools/suter';
+import { reporter } from '../tools/reporter';
 
-const DATA_LENGTH = 100;
 const PERIOD = 14;
 const SIGNAL_PERIOD = 3;
 
@@ -16,13 +15,14 @@ const dataset = Array.from({ length: DATA_LENGTH }, () => ({
     close: Math.random() * 40,
 }));
 const stoch2 = new Stochastic2(PERIOD, SIGNAL_PERIOD);
-const stoch3 = new Stochastic3(PERIOD, SIGNAL_PERIOD);
+const lows = dataset.map((data) => data.low);
+const closes = dataset.map((data) => data.close);
+const highs = dataset.map((data) => data.high);
+
 
 suite
     .add(`${sources.ti}`, function () {
-        const lows = dataset.map((data) => data.low);
-        const closes = dataset.map((data) => data.close);
-        const highs = dataset.map((data) => data.high);
+
         Stochastic.calculate({
             period: PERIOD,
             low: lows,
@@ -37,10 +37,8 @@ suite
             stoch2.nextValue(high, low, close);
         }
     })
-    .add(`${sources.trading_signals}`, function () {
-        for (let i = 0; i < DATA_LENGTH; i++) {
-            stoch3.update(dataset[i]);
-        }
+    .add(`${sources.indicatorts}`, function () {
+        stoch3(highs, lows, closes);
     })
     .on('cycle', function (event) {
         console.log(String(event.target));

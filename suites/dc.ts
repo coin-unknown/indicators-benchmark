@@ -1,9 +1,9 @@
 import Benchmark from 'benchmark';
 import { DC as DC1 } from '@debut/indicators';
-import { sources } from '../tools/suter.js';
-import { reporter } from '../tools/reporter.js';
+import { donchianChannel as dc2 } from 'indicatorts';
+import { DATA_LENGTH, sources } from '../tools/suter';
+import { reporter } from '../tools/reporter';
 
-const DATA_LENGTH = 100;
 const PERIOD = 12;
 
 const suite = new Benchmark.Suite('DC');
@@ -18,7 +18,10 @@ suite
             dc1.nextValue(datasetH[i], datasetL[i]);
         }
     })
-    .on('cycle', function (event) {
+    .add(`${sources.indicatorts}`, function () {
+        dc2(PERIOD, datasetH);
+    })
+    .on('cycle', function (event: Benchmark.Event) {
         console.log(String(event.target));
     })
     .on('complete', reporter)

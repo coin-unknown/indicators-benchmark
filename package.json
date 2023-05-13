@@ -20,7 +20,7 @@
     "start:sma": "ts-node ./suites/sma",
     "start:wema": "ts-node ./suites/wema",
     "start:wma": "ts-node ./suites/wma",
-    "start:stochastic": "ts-node ./suites/stochastic.js",
+    "start:stochastic": "ts-node ./suites/stochastic",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier suites/**/*.js --write"
   },
